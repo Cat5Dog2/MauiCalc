@@ -1,4 +1,4 @@
-﻿namespace MauiCalc;
+﻿namespace MauiCalc.View;
 
 public partial class MainPage : ContentPage
 {
