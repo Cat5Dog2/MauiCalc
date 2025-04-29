@@ -9,6 +9,9 @@
             Spacing="15"
             HorizontalOptions="Center">
 
+            <Entry FontSize="30" IsReadOnly="true" HorizontalTextAlignment="End"
+                HorizontalOptions="Center" WidthRequest="420" Text="" />
+
             <Grid
                 RowDefinitions="80,80,80,80"
                 ColumnDefinitions="80,80,80,80,80"
