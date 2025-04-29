@@ -40,12 +40,6 @@
                 <Button FontSize="25" Grid.Row="3" Grid.Column="3" Text="+" BackgroundColor="Gray" />
             </Grid>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
 
