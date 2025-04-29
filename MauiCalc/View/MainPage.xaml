@@ -5,19 +5,37 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+            Padding="10,15"
+            Spacing="15"
+            HorizontalOptions="Center">
 
-            <Label
-                Text="Hello, World!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+            <Grid
+                RowDefinitions="80,80,80,80"
+                ColumnDefinitions="80,80,80,80,80"
+                RowSpacing="5"
+                ColumnSpacing="5">
 
-            <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                <Button FontSize="25" Grid.Row="0" Grid.Column="0" Text="7" BackgroundColor="DarkGray" />
+                <Button FontSize="25" Grid.Row="0" Grid.Column="1" Text="8" BackgroundColor="DarkGray" />
+                <Button FontSize="25" Grid.Row="0" Grid.Column="2" Text="9" BackgroundColor="DarkGray" />
+                <Button FontSize="25" Grid.Row="0" Grid.Column="3" Text="/" BackgroundColor="Gray" />
+                <Button FontSize="25" Grid.Row="0" Grid.Column="4" Text="C" BackgroundColor="Gray" />
+
+                <Button FontSize="25" Grid.Row="1" Grid.Column="0" Text="4" BackgroundColor="DarkGray" />
+                <Button FontSize="25" Grid.Row="1" Grid.Column="1" Text="5" BackgroundColor="DarkGray" />
+                <Button FontSize="25" Grid.Row="1" Grid.Column="2" Text="6" BackgroundColor="DarkGray" />
+                <Button FontSize="25" Grid.Row="1" Grid.Column="3" Text="*" BackgroundColor="Gray" />
+                <Button FontSize="25" Grid.Row="1" Grid.Column="4" Text="=" BackgroundColor="Salmon" Grid.RowSpan="3" />
+
+                <Button FontSize="25" Grid.Row="2" Grid.Column="0" Text="1" BackgroundColor="DarkGray" />
+                <Button FontSize="25" Grid.Row="2" Grid.Column="1" Text="2" BackgroundColor="DarkGray" />
+                <Button FontSize="25" Grid.Row="2" Grid.Column="2" Text="3" BackgroundColor="DarkGray" />
+                <Button FontSize="25" Grid.Row="2" Grid.Column="3" Text="-" BackgroundColor="Gray" />
+
+                <Button FontSize="25" Grid.Row="3" Grid.Column="0" Text="0" BackgroundColor="DarkGray" Grid.ColumnSpan="2" />
+                <Button FontSize="25" Grid.Row="3" Grid.Column="2" Text="." BackgroundColor="DarkGray" />
+                <Button FontSize="25" Grid.Row="3" Grid.Column="3" Text="+" BackgroundColor="Gray" />
+            </Grid>
 
             <Button
                 x:Name="CounterBtn"
