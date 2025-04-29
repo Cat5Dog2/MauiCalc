@@ -1,4 +1,5 @@
 using System;
+using System.Windows.Input;
 
 namespace MauiCalc.ViewModel;
 
@@ -13,6 +14,16 @@ public class CalcViewModel
         {
             _label = value;
         }
+    }
+
+    public ICommand BtnCommand { get; }
+    public CalcViewModel()
+    {
+        BtnCommand = new Command<string>(
+            (n) =>
+            {
+            }
+        );
     }
 
 }
