@@ -10,7 +10,7 @@
             HorizontalOptions="Center">
 
             <Entry FontSize="30" IsReadOnly="true" HorizontalTextAlignment="End"
-                HorizontalOptions="Center" WidthRequest="420" Text="" />
+                HorizontalOptions="Center" WidthRequest="420" Text="{Binding Label, Mode=OneWay}" />
 
             <Grid
                 RowDefinitions="80,80,80,80"
