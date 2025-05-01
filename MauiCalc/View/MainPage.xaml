@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCalc.View.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="10,15"
+            Spacing="15"
+            HorizontalOptions="Center">
+
+            <Entry FontSize="30" IsReadOnly="true" HorizontalTextAlignment="End"
+                HorizontalOptions="Center" WidthRequest="420" Text="{Binding Label, Mode=OneWay}" />
+
+            <Grid
+                RowDefinitions="80,80,80,80"
+                ColumnDefinitions="80,80,80,80,80"
+                RowSpacing="5"
+                ColumnSpacing="5">
+
+                <Button FontSize="25" Grid.Row="0" Grid.Column="0" Text="7" BackgroundColor="DarkGray"
+                    Command="{Binding BtnCommand}" CommandParameter="7" />
+                <Button FontSize="25" Grid.Row="0" Grid.Column="1" Text="8" BackgroundColor="DarkGray"
+                    Command="{Binding BtnCommand}" CommandParameter="8" />
+                <Button FontSize="25" Grid.Row="0" Grid.Column="2" Text="9" BackgroundColor="DarkGray"
+                    Command="{Binding BtnCommand}" CommandParameter="9" />
+                <Button FontSize="25" Grid.Row="0" Grid.Column="3" Text="/" BackgroundColor="Gray" 
+                    Command="{Binding BtnCommand}" CommandParameter="/" />
+                <Button FontSize="25" Grid.Row="0" Grid.Column="4" Text="C" BackgroundColor="Gray"
+                    Command="{Binding BtnCommand}" CommandParameter="C" />
+
+                <Button FontSize="25" Grid.Row="1" Grid.Column="0" Text="4" BackgroundColor="DarkGray"
+                    Command="{Binding BtnCommand}" CommandParameter="4" />
+                <Button FontSize="25" Grid.Row="1" Grid.Column="1" Text="5" BackgroundColor="DarkGray"
+                    Command="{Binding BtnCommand}" CommandParameter="5" />
+                <Button FontSize="25" Grid.Row="1" Grid.Column="2" Text="6" BackgroundColor="DarkGray"
+                    Command="{Binding BtnCommand}" CommandParameter="6" />
+                <Button FontSize="25" Grid.Row="1" Grid.Column="3" Text="*" BackgroundColor="Gray"
+                    Command="{Binding BtnCommand}" CommandParameter="*" />
+                <Button FontSize="25" Grid.Row="1" Grid.Column="4" Text="=" BackgroundColor="Salmon" Grid.RowSpan="3"
+                    Command="{Binding BtnCommand}" CommandParameter="=" />
+
+                <Button FontSize="25" Grid.Row="2" Grid.Column="0" Text="1" BackgroundColor="DarkGray"
+                    Command="{Binding BtnCommand}" CommandParameter="1" />
+                <Button FontSize="25" Grid.Row="2" Grid.Column="1" Text="2" BackgroundColor="DarkGray"
+                    Command="{Binding BtnCommand}" CommandParameter="2" />
+                <Button FontSize="25" Grid.Row="2" Grid.Column="2" Text="3" BackgroundColor="DarkGray"
+                    Command="{Binding BtnCommand}" CommandParameter="3" />
+                <Button FontSize="25" Grid.Row="2" Grid.Column="3" Text="-" BackgroundColor="Gray"
+                    Command="{Binding BtnCommand}" CommandParameter="-" />
+
+                <Button FontSize="25" Grid.Row="3" Grid.Column="0" Text="0" BackgroundColor="DarkGray" Grid.ColumnSpan="2"
+                    Command="{Binding BtnCommand}" CommandParameter="0" />
+                <Button FontSize="25" Grid.Row="3" Grid.Column="2" Text="." BackgroundColor="DarkGray"
+                    Command="{Binding BtnCommand}" CommandParameter="." />
+                <Button FontSize="25" Grid.Row="3" Grid.Column="3" Text="+" BackgroundColor="Gray"
+                    Command="{Binding BtnCommand}" CommandParameter="+" />
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
