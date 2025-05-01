@@ -1,10 +1,16 @@
 using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
 namespace MauiCalc.ViewModel;
 
-public class CalcViewModel
+public class CalcViewModel : INotifyPropertyChanged
 {
+    public event PropertyChangedEventHandler? PropertyChanged;
+    protected void OnPropertyChanged([CallerMemberName] string? name = null) =>
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+
     private string _label = "0";
 
     public string Label
@@ -13,6 +19,7 @@ public class CalcViewModel
         set
         {
             _label = value;
+            OnPropertyChanged();
         }
     }
 
@@ -22,6 +29,7 @@ public class CalcViewModel
         BtnCommand = new Command<string>(
             (n) =>
             {
+                this.Label = n;
             }
         );
     }
